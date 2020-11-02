@@ -40,8 +40,8 @@ export function flagFinder(country) {
             return Countries[9]
         case 'Mexico':
             return Countries[10]
-            case 'Peru':
-                return Countries[11]
+        case 'Peru':
+            return Countries[11]
         default:
             break;
     }

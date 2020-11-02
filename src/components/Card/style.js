@@ -1,11 +1,11 @@
 import styled from "styled-components"
 export const StyledCard = styled.div`
 display:grid;
-grid-template-areas:${props=>props.type==="snack"?
-"'avatar . data  ' 'avatar . data '":
-"'avatar  data ''avatar  data' "
-} ;
-background-color:${props => props.type==="snack"?'beige':'white'};
+grid-template-areas:${props => props.type === "snack" ?
+        "'avatar . data  ' 'avatar . data '" :
+        "'avatar  data ''avatar  data' "
+    } ;
+background-color:${props => props.type === "snack" ? 'beige' : 'white'};
 margin:1rem 0;
 border:1px solid white;
 border-radius:1%;
@@ -50,4 +50,3 @@ span a{
   }
 `;
 
-                      

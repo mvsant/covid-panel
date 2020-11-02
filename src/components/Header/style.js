@@ -48,6 +48,6 @@ export const StyledNav = styled.nav`
 `;
 
 export const activeStyle = {
-    fontWeight: "bold",
-    color: "var(--secondary-color)",
+  fontWeight: "bold",
+  color: "var(--secondary-color)",
 };

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import EarthFlag from "../../assets/images/un-flag.png"
 
 
-export const StyledSelectContainer = styled.div `
+export const StyledSelectContainer = styled.div`
 
 `
 export const StyledSelect = styled.select`

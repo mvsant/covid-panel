@@ -4,6 +4,7 @@ import { CSSTransition } from "react-transition-group";
 import { request } from "../../api";
 import Card from "../../components/Card";
 import Container from "../../components/Container";
+import Loading from "../../components/Loading";
 import './styles.css';
 
 function usePrevious(value) {
@@ -32,7 +33,7 @@ export default function Country(props) {
     }, [country, inProp, prevCount])
 
     return data.country === undefined ? (
-        <>Loading</>
+        <Loading />
     ) : (
             <CSSTransition in={inProp} timeout={300} classNames="my-node">
                 <Container>
