@@ -5,6 +5,7 @@ html, body {
     background-color: var(--bg-primary);
     color:var(--primary-color);
     font-family: 'Quicksand', sans-serif;
+    max-width: 100vw;
 }
 :root {
     --primary-color:#14213d;

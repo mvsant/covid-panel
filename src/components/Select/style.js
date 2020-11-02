@@ -10,6 +10,7 @@ background-repeat:no-repeat;
 background-position:bottom left;
 padding-left:20px;
 padding-right:10px;
+max-width:35vw;
 `
 
 export const StyledOption = styled.option`

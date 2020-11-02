@@ -14,6 +14,7 @@ a {
 }
 color: var(--secondary-color);
 background-color: var(--bg-secondary);
+max-width:100vw;
 `
 
 export const StyledNav = styled.nav`
@@ -48,6 +49,6 @@ export const StyledNav = styled.nav`
 `;
 
 export const activeStyle = {
-  fontWeight: "bold",
-  color: "var(--secondary-color)",
+    fontWeight: "bold",
+    color: "var(--secondary-color)",
 };

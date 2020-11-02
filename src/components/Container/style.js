@@ -6,4 +6,5 @@ max-width:100vw;
 display:flex;
 flex-direction:column;
 align-items:center;
+padding:0.1rem;
 `

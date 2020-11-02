@@ -16,15 +16,12 @@ width:70vw;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-
-    margin-right:-10px;
 }
 .data{
     grid-area:data;
     font-size:1.1rem;
     line-height:1.4;
     letter-spacing:0.09rem;
-    margin:0 auto;
     span {
         font-weight:700;
     }
@@ -45,8 +42,19 @@ span a{
     span a:hover{
      background-color:white;
     }
+box-shadow: 1px 10px 11px 0px rgba(0,0,0,0.62);
 @media (max-width: 768px) {
     width:90vw;
+  display:flex;
+  flex-direction:column;
+    .profile {
+    flex-direction:column;
+    padding-bottom:2rem;
+}
+    .avatar{
+    width:64px;
+    height:64px;
+}
   }
 `;
 

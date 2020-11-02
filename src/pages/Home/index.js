@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { index } from "../../api";
 import Card from "../../components/Card";
 import Container from "../../components/Container";
+import Loading from "../../components/Loading";
 
 export default function Home() {
     const [data, setData] = useState('');
@@ -10,7 +11,7 @@ export default function Home() {
         index(setData);
     }, [])
     return data[0] === undefined ? (
-        <>Loading</>
+        <Loading/>
     ) : (
             <Container>
                 <h2>World Status:</h2>

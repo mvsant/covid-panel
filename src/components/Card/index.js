@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { flagFinder } from "../../utils/countries";
 import { categoryMask, numbersMask } from "../../utils/masks";
-import Loading from "../Loading";
 import { StyledCard } from "./style";
 
 export default function Card({ data, name, type }) {
@@ -25,14 +24,18 @@ export default function Card({ data, name, type }) {
     }
   }
   return data === undefined ? (
-    <Loading />
+    null
   ) : (
       <StyledCard type={type}>
         <div className="profile">
           <img className="avatar" src={flagFinder(name).flag} alt={data.country} />
-          < h2>
+          < h3>
             {data.country}
-          </h2>
+          </h3>
+          {type === "snack" ?
+            <span> <Link to={`/country/${data.country}`}>Details</Link></span>
+            : null
+          }
         </div>
 
         <div >
@@ -44,10 +47,6 @@ export default function Card({ data, name, type }) {
               </div>
             ))}
         </div>
-        {type === "snack" ?
-          <span> <Link to={`/country/${data.country}`}>Details</Link></span>
-          : null
-        }
       </StyledCard>
     );
 }

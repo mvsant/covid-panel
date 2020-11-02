@@ -18,10 +18,12 @@ export default function Select() {
 
     return (
         <StyledSelectContainer>
-            <label htmlFor="countrySelect">Select a country</label><br />
+            <label htmlFor="countrySelect">Select a country:</label><br />
             <StyledSelect value={country} id="countrySelect" onChange={event => setCountry(event.target.value)}>
                 {Countries.map((item, index) => (
+                    index>0?
                     <StyledOption key={index} value={item.name} name={item.name}>{item.name}</StyledOption>
+                    :null
                 ))}
             </StyledSelect>
         </StyledSelectContainer>
