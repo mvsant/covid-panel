@@ -1,0 +1,16 @@
+html, body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: var(--bg-primary);
+    color:var(--primary-color);
+    font-family: 'Quicksand', sans-serif;
+}
+:root {
+    --primary-color:#14213d;
+    --secondary-color: #f0efeb;
+    --bg-primary: #5ba4b8;
+    --bg-secondary: #343a40;
+    --head-color: #2b9348;
+    --head-bg: #4d194d;
+}
