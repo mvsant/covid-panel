@@ -8,7 +8,7 @@ import Header from "./components/Header";
 import About from "./pages/About";
 import Country from "./pages/Country";
 import Home from "./pages/Home";
-import './styles.css';
+import './styles/styles.css';
 
 const routes = [
   { path: "/", name: "Home", Component: Home, routes: [] },
