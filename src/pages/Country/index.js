@@ -1,21 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { request } from "../../api";
 import Card from "../../components/Card";
 import Container from "../../components/Container";
 import Loading from "../../components/Loading";
+import { usePrevious } from "../../utils/hooks";
 import './styles.css';
 
-function usePrevious(value) {
-    const ref = useRef();
-    useEffect(() => {
-        ref.current = value;
-    });
-    return ref.current;
-}
-
-export default function Country(props) {
+export default function Country() {
     const [data, setData] = useState('World');
     const [inProp, setInProp] = useState(false);
     const location = useLocation();

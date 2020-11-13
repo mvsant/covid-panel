@@ -1,13 +1,23 @@
 const baseUrl = "https://coronavirus-19-api.herokuapp.com/countries/";
 
 export async function index(setData) {
-    await fetch(baseUrl, { credentials: 'omit' })
-        .then((response) => response.json())
-        .then((data) => setData(data));
-}
+    try{
+        await fetch(baseUrl)
+            .then((response) => response.json())
+            .then((data) => setData(data));
+    }
+    catch (err) {
+        console.error('err', err);
+      }
+};
 
 export async function request(setData, country) {
-    await fetch(`${baseUrl}${country}`, { cache:"force-cache",mode:"cors",credentials:"same-origin"})
-        .then((response) => response.json())
-        .then((data) => setData(data));
-}
+    try{
+        await fetch(`${baseUrl}${country}`)
+            .then((response) => response.json())
+            .then((data) => setData(data));
+    }
+    catch (err) {
+        console.error('err', err);
+      }
+};

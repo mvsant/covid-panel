@@ -30,8 +30,12 @@ export const Countries = [
     { id: 26, name: "Saudi Arabia", flag: "https://www.countryflags.io/sa/shiny/64.png" },
     { id: 27, name: "Czechia", flag: "https://www.countryflags.io/cz/shiny/64.png" },
     { id: 28, name: "Pakistan", flag: "https://www.countryflags.io/pk/shiny/64.png" },
-    { id: 28, name: "Israel", flag: "https://www.countryflags.io/il/shiny/64.png" },
-    { id: 29, name: "Sierra Leone", flag: "https://www.countryflags.io/sl/shiny/64.png" },
+    { id: 29, name: "Israel", flag: "https://www.countryflags.io/il/shiny/64.png" },
+    { id: 30, name: "Sierra Leone", flag: "https://www.countryflags.io/sl/shiny/64.png" },
+    { id: 31, name: "China", flag: "https://www.countryflags.io/cn/shiny/64.png" },
+    { id: 32, name: "Nigeria", flag: "https://www.countryflags.io/ng/shiny/64.png" },
+    { id: 33, name: "Uruguay", flag: "https://www.countryflags.io/uy/shiny/64.png" },
+    { id: 34, name: "Saudi Arabia", flag: "https://www.countryflags.io/sa/shiny/64.png" },
 ]
 
 export function flagFinder(country) {
@@ -60,7 +64,6 @@ export function flagFinder(country) {
             return Countries[10]
         case 'Peru':
             return Countries[11]
-
         case "South Africa":
             return Countries[12]
         case "Italy":
@@ -99,8 +102,16 @@ export function flagFinder(country) {
             return Countries[29]
         case 'Sierra Leone':
             return Countries[30]
+        case 'China':
+            return Countries[31]
+        case 'Nigeria':
+            return Countries[32]
+        case 'Uruguay':
+            return Countries[33]
+        case 'Saudi Arabia':
+            return Countries[34]
         default:
-            break;
+            return { id: 999, name: "None", flag: EarthFlag }
     }
 }
 
