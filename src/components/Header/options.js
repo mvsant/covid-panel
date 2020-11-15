@@ -4,7 +4,7 @@ import { routesMask } from "../../utils/masks";
 import { activeStyle } from "./style";
 
 const pages = [
-  "/",
+  //"/",
   "/about",
 ];
 export default function Options() {

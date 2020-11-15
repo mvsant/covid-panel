@@ -20,6 +20,7 @@ export default function Country() {
             if (country !== prevCount) {
                 request(setData, country)
                 setInProp(!inProp)
+                window.scrollTo(0, 0)
             }
         }
         return effect()
@@ -31,6 +32,7 @@ export default function Country() {
             <CSSTransition in={inProp} timeout={300} classNames="my-node">
                 <Container>
                     <Card data={data} name={data.country} />
+                    <Container />
                 </Container>
             </CSSTransition>
         )

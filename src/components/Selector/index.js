@@ -11,7 +11,7 @@ export default function Selector() {
     useEffect(() => {
         function handleCategory(category) {
             if (category !== "") {
-                history.push(`/category/${category}`);
+                history.push(`/category/${category}/1`);
             }
         }
         return handleCategory(category)

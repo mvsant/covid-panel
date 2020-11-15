@@ -15,7 +15,7 @@ const routes = [
   { path: "/", name: "Home", Component: Home, routes: [] },
   { path: "/about", name: "About", Component: About },
   { path: "/country/:country", name: "Country", Component: Country },
-  { path: "/category/:category", name: "Category", Component: Category }
+  { path: "/category/:category/:page", name: "Category", Component: Category },
 ]
 
 export default function Routes() {

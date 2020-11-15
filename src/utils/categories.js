@@ -1,45 +1,42 @@
 export const Categories = [
-    {category:"country"},
-    {category:"cases"},
-    {category:"todayCases"},
-    {category:"deaths"},
-    {category:"todayDeaths"},
-    {category:"recovered"},
-    {category:"active"},
-    {category:"critical"},
-    {category:"casesPerOneMillion"},
-    {category:"deathsPerOneMillion"},
-    {category:"totalTests"},
-    {category:"testsPerOneMillion"},
+    { category: "cases" },
+    { category: "todayCases" },
+    { category: "deaths" },
+    { category: "todayDeaths" },
+    { category: "recovered" },
+    { category: "active" },
+    { category: "critical" },
+    { category: "casesPerOneMillion" },
+    { category: "deathsPerOneMillion" },
+    { category: "totalTests" },
+    { category: "testsPerOneMillion" },
 ];
 
 export function categoryFinder(category) {
     switch (category) {
-        case 'country':
-            return 0
         case 'cases':
-            return 1
+            return 0
         case 'todayCases':
-            return 2
+            return 1
         case 'deaths':
-            return 3
+            return 2
         case 'todayDeaths':
-            return 4
+            return 3
         case 'recovered':
-            return 5
+            return 4
         case 'active':
-            return 6
+            return 5
         case 'critical':
-            return 7
+            return 6
         case 'casesPerOneMillion':
-            return 8
+            return 7
         case 'deathsPerOneMillion':
-            return 9
+            return 8
         case 'totalTests':
-            return 10
+            return 9
         case 'testsPerOneMillion':
-            return 11
+            return 10
         default:
-            return 12
+            return 11
     }
 }

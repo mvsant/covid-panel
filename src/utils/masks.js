@@ -13,6 +13,6 @@ export function routesMask(path) {
     if (path.match(/about/g)) {
         return "About";
     } else {
-        return "Home";
+        return "Test";
     }
 }

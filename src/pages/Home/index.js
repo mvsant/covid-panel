@@ -6,6 +6,7 @@ import Loading from "../../components/Loading";
 
 export default function Home() {
     const [data, setData] = useState('');
+    const pageCount = Math.ceil(data.length/10);
 
     function handleSort(data,type) {
        return [].concat(data)
@@ -22,7 +23,8 @@ export default function Home() {
     }, [])
 
     console.log(data.length);
-    
+    console.log(pageCount);
+
     return data[0] === undefined ? (
         <Loading />
     ) : (
