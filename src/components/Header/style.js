@@ -2,8 +2,9 @@ import styled from "styled-components"
 
 export const StyledHeader = styled.div`
 display:flex;
-align-items:center;
+align-items:flex-end;
 justify-content:space-around;
+padding-left:1rem;
 * {
 list-style-type:none;
 display:inline-block;

@@ -3,7 +3,7 @@ import { flagFinder } from "../../utils/countries";
 import { categoryMask, numbersMask } from "../../utils/masks";
 import { StyledCard } from "./style";
 
-export default function Card({ data, name, type }) {
+export default function Card({ data, name, type, category }) {
   function handleType(item, type) {
     if (type === "world") {
       return (
@@ -19,6 +19,10 @@ export default function Card({ data, name, type }) {
         item.includes("todayDeaths") ||
         item.includes("recovered")
       );
+    } else if (type === "single") {
+      return (
+        item.includes(category)
+      );
     } else {
       return !item.includes("country");
     }
@@ -32,7 +36,7 @@ export default function Card({ data, name, type }) {
           < h3>
             {data.country}
           </h3>
-          {type === "snack" ?
+          {type === "snack" || type==="single" ?
             <span> <Link to={`/country/${data.country}`}>Details</Link></span>
             : null
           }

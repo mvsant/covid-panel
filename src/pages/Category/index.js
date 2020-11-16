@@ -21,15 +21,20 @@ export default function Test() {
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
+
+
     useEffect(() => {
         index(setData);
         window.scrollTo(0, 0);
     }, [])
 
+
     useEffect(() => {
         function effect() {
             if (category !== prevCount) {
                 //request(setData, category)
+                //handleCategory(category);
+
                 setHighight(categoryFinder(category))
                 setInProp(!inProp)
                 setCurrentPage(1)
@@ -38,9 +43,14 @@ export default function Test() {
         return effect()
     }, [category, inProp, prevCount])
 
+    function handleSort() {
+        return [].concat(data)
+            .sort((a, b) => a[category] < b[category] ? 1 : -1)
+    }
+
     const indexOfLast = currentPage * itemsPerPage;
     const indexOfFirst = indexOfLast - itemsPerPage;
-    const current = data.slice(indexOfFirst, indexOfLast);
+    const current = handleSort().slice(indexOfFirst, indexOfLast);
 
 
     return data[0] === undefined ? (
@@ -63,7 +73,7 @@ export default function Test() {
                         .map((item, index) => (
                             index <= 10 && item.country !== "World" ?
                                 <StyledWrapper highlight={highlight} key={index}>
-                                    <Card data={item} name={item.country} />
+                                    <Card data={item} name={item.country} type="single" category={category} />
                                 </StyledWrapper>
 
                                 : null
