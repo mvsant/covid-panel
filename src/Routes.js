@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Category from "./pages/Category";
 import Country from "./pages/Country";
 import Home from "./pages/Home";
+import Search from "./pages/Search";
 import './styles/styles.css';
 
 const routes = [
@@ -16,6 +17,7 @@ const routes = [
   { path: "/about", name: "About", Component: About },
   { path: "/country/:country", name: "Country", Component: Country },
   { path: "/category/:category/:page", name: "Category", Component: Category },
+  { path: "/search/:country", name: "Search", Component: Search }
 ]
 
 export default function Routes() {

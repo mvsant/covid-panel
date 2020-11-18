@@ -21,8 +21,6 @@ export default function Test() {
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
-
-
     useEffect(() => {
         index(setData);
         window.scrollTo(0, 0);

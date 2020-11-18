@@ -6,7 +6,6 @@ import Loading from "../../components/Loading";
 
 export default function Home() {
     const [data, setData] = useState('');
-    const pageCount = Math.ceil(data.length/10);
 
     function handleSort(data,type) {
        return [].concat(data)
@@ -22,9 +21,6 @@ export default function Home() {
         index(setData);
     }, [])
 
-    console.log(data.length);
-    console.log(pageCount);
-
     return data[0] === undefined ? (
         <Loading />
     ) : (
@@ -33,7 +29,7 @@ export default function Home() {
                 <Card data={data[0]} name={data[0].country} type="world" />
                 <h2>Most affected countries:</h2>
 
-{handleSort(data,'critical')}
+{handleSort(data,'cases')}
                 {
 
                 }

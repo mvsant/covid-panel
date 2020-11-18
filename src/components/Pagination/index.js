@@ -13,7 +13,7 @@ const Pagination = ({ itemsPerPage, total, paginate, next, previous, category })
         <nav>
             <StyledUl className='pagination'>
                 {previous === 0 ? null :
-                    <StyledNavLink onClick={() => paginate(previous)} activeStyle={activeStyle} to={`/category/${category}/${previous}`}>
+                    <StyledNavLink onClick={() => paginate(previous) || window.scrollTo(0, 0)} activeStyle={activeStyle} to={`/category/${category}/${previous}`}>
                         Prev |
                         </StyledNavLink>
                 }
@@ -26,7 +26,7 @@ const Pagination = ({ itemsPerPage, total, paginate, next, previous, category })
                         </li>
                 ))}
                 {next > pages ? null :
-                    <StyledNavLink onClick={() => paginate(next)} activeStyle={activeStyle} to={`/category/${category}/${next}`}>
+                    <StyledNavLink onClick={() => paginate(next) || window.scrollTo(0, 0)} activeStyle={activeStyle} to={`/category/${category}/${next}`}>
                         | Next
                         </StyledNavLink>
                 }

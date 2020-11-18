@@ -23,14 +23,16 @@ export const StyledNav = styled.nav`
     height: auto;
     display: ${(props) => props.visibility || "flex"};
     flex-direction: column;
-    justify-content:flex-end;
-    align-items:flex-end;
+    justify-content:baseline;
+    align-items:center;
     flex-wrap: wrap;
+    li{
+      padding:0 1rem
+    }
     li a {
       text-decoration: none;
       color: var(--primary-color);
       font-size: 1.2rem;
-      margin: 1rem;
     }
     li a:visited {
       color: var(--primary-color-dark);
@@ -43,7 +45,6 @@ export const StyledNav = styled.nav`
         color: var(--primary-color);
         font-size: 1.2rem;
         padding: 0.5rem;
-        margin: 1rem;
       }
     }
   }
