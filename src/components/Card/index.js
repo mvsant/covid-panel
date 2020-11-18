@@ -20,37 +20,37 @@ export default function Card({ data, name, type, category }) {
         item.includes("recovered")
       );
     } else if (type === "single") {
-      return (
-        item.includes(category)
-      );
+      return item.includes(category);
     } else {
       return !item.includes("country");
     }
   }
-  return data === undefined ? (
-    null
-  ) : (
-      <StyledCard type={type}>
-        <div className="profile">
-          <img className="avatar" src={flagFinder(name).flag} alt={data.country} />
-          < h3>
-            {data.country}
-          </h3>
-          {type === "snack" || type==="single" ?
-            <span> <Link to={`/country/${data.country}`}>Details</Link></span>
-            : null
-          }
-        </div>
+  return data === undefined ? null : (
+    <StyledCard type={type}>
+      <div className="profile">
+        <img
+          className="avatar"
+          src={flagFinder(name).flag}
+          alt={data.country}
+        />
+        <h3>{data.country}</h3>
+        {type === "snack" || type === "single" ? (
+          <span>
+            {" "}
+            <Link to={`/country/${data.country}`}>Details</Link>
+          </span>
+        ) : null}
+      </div>
 
-        <div >
-          {Object.entries(data)
-            .filter((choosen) => handleType(choosen, type))
-            .map((list, index) => (
-              <div key={index} className="data">
-                <span>{categoryMask(list[0])}:</span> {numbersMask(list[1])}
-              </div>
-            ))}
-        </div>
-      </StyledCard>
-    );
+      <div>
+        {Object.entries(data)
+          .filter((choosen) => handleType(choosen, type))
+          .map((list, index) => (
+            <div key={index} className="data">
+              <span>{categoryMask(list[0])}:</span> {numbersMask(list[1])}
+            </div>
+          ))}
+      </div>
+    </StyledCard>
+  );
 }

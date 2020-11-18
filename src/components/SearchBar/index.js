@@ -4,28 +4,34 @@ import { StyledHeader } from "../Header/style";
 import { StyledLabel, StyledSearch } from "./style";
 
 export default function SearchBar() {
-    const [search, setSearch] = useState('');
-    const history = useHistory();
+  const [search, setSearch] = useState("");
+  const history = useHistory();
 
-    useEffect(() => {
+  useEffect(() => {
+    function handleSearch(search) {
+      if (search !== "") {
+        history.push(`/search/${search}`);
+      }
+    }
+    return handleSearch(search);
+  }, [search, history]);
 
-        function handleSearch(search) {
-            if (search !== "") {
-                history.push(`/search/${search}`);
-            }
-        }
-        return handleSearch(search)
-    }, [search, history])
-
-    return (
-        <>
-            <StyledHeader>
-                <StyledLabel htmlFor="sch">
-                    Search:
-                </StyledLabel>
-                <br />
-                <StyledSearch type="text" name="search" id="sch" onKeyPress={e => (e.key === 'Enter' ? setSearch(e.target.value.toLowerCase()) || e.target.blur() : null)} />
-            </StyledHeader>
-        </>
-    )
+  return (
+    <>
+      <StyledHeader>
+        <StyledLabel htmlFor="sch">Search:</StyledLabel>
+        <br />
+        <StyledSearch
+          type="text"
+          name="search"
+          id="sch"
+          onKeyPress={(e) =>
+            e.key === "Enter"
+              ? setSearch(e.target.value.toLowerCase()) || e.target.blur()
+              : null
+          }
+        />
+      </StyledHeader>
+    </>
+  );
 }
