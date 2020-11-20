@@ -1,37 +1,36 @@
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { Countries } from "../../utils/countries";
+import { Categories } from "../../utils/categories";
+import { categoryMask } from "../../utils/masks";
 import { StyledOption, StyledSelect, StyledSelectContainer } from "./style";
 
-export default function Select() {
-  const [country, setCountry] = useState("");
+export default function Selector() {
+  const [category, setCategory] = useState("");
   let history = useHistory();
 
   useEffect(() => {
-    function handleCountry(country) {
-      if (country !== "") {
-        history.push(`/country/${country}`);
+    function handleCategory(category) {
+      if (category !== "") {
+        history.push(`/category/${category}/1`);
       }
     }
-    return handleCountry(country);
-  }, [country, history]);
+    return handleCategory(category);
+  }, [category, history]);
 
   return (
     <StyledSelectContainer>
-      <label htmlFor="countrySelect">Select a country:</label>
+      <label htmlFor="countrySelect">Select a category:</label>
       <br />
       <StyledSelect
-        value={country}
+        value={category}
         id="countrySelect"
-        onChange={(event) => setCountry(event.target.value)}
+        onChange={(event) => setCategory(event.target.value)}
       >
-        {Countries.map((item, index) =>
-          index > 0 ? (
-            <StyledOption key={index} value={item.name} name={item.name}>
-              {item.name}
-            </StyledOption>
-          ) : null
-        )}
+        {Categories.map((item, index) => (
+          <StyledOption key={index} value={item.category} name={item.category}>
+            {categoryMask(item.category)}
+          </StyledOption>
+        ))}
       </StyledSelect>
     </StyledSelectContainer>
   );

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Selector from "../Selector";
+import Select from "../Select";
 import Options from "./options";
 import Search from "../SearchBar";
 import { StyledHeader, StyledNav } from "./style";
@@ -15,7 +15,7 @@ export default function Header() {
         </StyledNav>
       </StyledHeader>
       <StyledHeader>
-        <Selector />
+        <Select />
         <Search />
       </StyledHeader>
     </>

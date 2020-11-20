@@ -1,13 +1,16 @@
 import styled from "styled-components";
 import EarthFlag from "../../assets/images/un-flag.png";
 
-export const StyledSelectContainer = styled.div``;
+export const StyledSelectContainer = styled.div`
+  label {
+    padding-bottom: 1rem;
+  }
+`;
 export const StyledSelect = styled.select`
   background-repeat: no-repeat;
-  background-position: bottom left;
-  padding-left: 20px;
   padding-right: 10px;
-  max-width: 15vw;
+  margin-bottom: 1rem;
+  max-width: 20vw;
 `;
 
 export const StyledOption = styled.option`
