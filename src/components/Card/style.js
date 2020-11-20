@@ -44,9 +44,10 @@ export const StyledCard = styled.div`
   }
   box-shadow: 1px 10px 11px 0px rgba(0, 0, 0, 0.62);
   @media (max-width: 768px) {
-    width: 90vw;
+    width: 80vw;
     display: flex;
     flex-direction: column;
+    text-align:center;
     .profile {
       flex-direction: column;
       padding-bottom: 2rem;

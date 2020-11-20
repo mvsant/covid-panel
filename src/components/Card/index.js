@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { flagFinder } from "../../utils/countries";
+import { flagFinder } from "../../utils/flagFinder";
 import { categoryMask, numbersMask } from "../../utils/masks";
 import { StyledCard } from "./style";
 
