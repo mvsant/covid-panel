@@ -10,12 +10,14 @@ body {
   min-height: 100%;
   background-image: linear-gradient(var(--peaceful-color), var(--bg-primary));
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 :root {
   --primary-color: #14213d;
-  --secondary-color: #f0efeb;
+  --secondary-color: #e2e2e2;
   --bg-primary: #5ba4b8;
   --bg-secondary: #343a40;
   --highlight-color: #2b9348;
+  --close-color: #ff0000;
   --peaceful-color:#b0cde7;
 }

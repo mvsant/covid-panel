@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+//import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Category from "./pages/Category";
 import Country from "./pages/Country";
@@ -20,7 +21,8 @@ const routes = [
 export default function Routes() {
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
+      <Navbar />
       <div className="container">
         {routes.map(({ path, Component }) => (
           <Route key={path} exact path={path}>
