@@ -8,6 +8,7 @@ const baseLink = `
     font-weight: bold;
     font-size: 24px;
     cursor: pointer;
+    text-align:center;
     `;
 
 export const ModalLink = styled(Link)`
@@ -54,6 +55,9 @@ Nav.Links = styled.ul`
   transform: ${(props) =>
     props.toggle ? "translateX(0%)" : "translateX(100%)"};
   transition: transform 0.5s ease-in;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
   li {
     //opacity: 0;
     animation: navLinkFade 1s ease forwards;
@@ -62,7 +66,7 @@ Nav.Links = styled.ul`
   a {
     ${baseLink}
   }
-  .modal-caller {
+  .list-item {
     ${baseLink}
   }
 `;
@@ -119,7 +123,7 @@ Nav.Modal = styled.div`
       position: relative;
       font-family: monospace;
       background-color: white;
-      width: 90%;
+      width: 100%;
       height: auto;
       display: flex;
       justify-content: space-between;

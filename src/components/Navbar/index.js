@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Categories } from "../../utils/categories";
 import { categoryMask } from "../../utils/masks";
+import SearchBar from "../SearchBar";
 import Burguer from "./Burguer";
 import Nav, { ModalLink } from "./style";
 
@@ -15,8 +16,16 @@ export default function Navbar() {
         <h1>Covid Status</h1>
       </Nav.Logo>
       <Nav.Links toggle={toggleNav}>
-        <li className="modal-caller" onClick={() => setToggleDrop(!toggleDrop)}>
+        <li className="list-item" onClick={() => setToggleDrop(!toggleDrop)}>
           Categories:
+        </li>
+        <li
+          className="list-item"
+          onBlur={() => setToggleNav(!toggleNav)}
+          toggle={!toggleNav}
+        >
+          Search
+          <SearchBar />
         </li>
         <li>
           <a href="/"> Home</a>

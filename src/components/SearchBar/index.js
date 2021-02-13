@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { StyledHeader } from "../Header/style";
-import { StyledLabel, StyledSearch } from "./style";
+import { StyledSearch } from "./style";
 
 export default function SearchBar() {
   const [search, setSearch] = useState("");
@@ -19,7 +19,6 @@ export default function SearchBar() {
   return (
     <>
       <StyledHeader>
-        <StyledLabel htmlFor="sch">Search:</StyledLabel>
         <br />
         <StyledSearch
           type="text"
