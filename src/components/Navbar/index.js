@@ -13,7 +13,9 @@ export default function Navbar() {
   return (
     <Nav>
       <Nav.Logo>
+        <a className="nav-title" href="/">
         <h1>Covid Status</h1>
+        </a>
       </Nav.Logo>
       <Nav.Links toggle={toggleNav}>
         <li className="list-item" onClick={() => setToggleDrop(!toggleDrop)}>

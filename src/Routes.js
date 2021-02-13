@@ -21,7 +21,6 @@ const routes = [
 export default function Routes() {
   return (
     <Router>
-      {/* <Header /> */}
       <Navbar />
       <div className="container">
         {routes.map(({ path, Component }) => (

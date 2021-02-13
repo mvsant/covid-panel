@@ -6,7 +6,7 @@ const baseLink = `
     text-decoration: none;
     letter-spacing: 2.5px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
     text-align:center;
     `;
@@ -31,6 +31,9 @@ const Nav = styled.nav`
   background-color: var(--bg-secondary);
   font-family: "Poppins", sans-serif;
   z-index: 1;
+  .nav-title{
+    ${baseLink}
+  }
 `;
 
 Nav.Logo = styled.div`
