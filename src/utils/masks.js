@@ -7,11 +7,3 @@ export function categoryMask(name) {
 export function numbersMask(number) {
   return Number(number).toLocaleString();
 }
-
-export function routesMask(path) {
-  if (path.match(/about/g)) {
-    return "About";
-  } else {
-    return "Test";
-  }
-}

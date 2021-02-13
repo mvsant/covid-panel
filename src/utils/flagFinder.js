@@ -1,450 +1,228 @@
 import { Countries } from "./countries";
-import EarthFlag from "../assets/images/un-flag.png";
 
-export function flagFinder(country) {
-  switch (country) {
-    case "World":
-      return Countries[0];
-    case "USA":
-      return Countries[1];
-    case "India":
-      return Countries[2];
-    case "Brazil":
-      return Countries[3];
-    case "Russia":
-      return Countries[4];
-    case "France":
-      return Countries[5];
-    case "Spain":
-      return Countries[6];
-    case "Argentina":
-      return Countries[7];
-    case "Colombia":
-      return Countries[8];
-    case "UK":
-      return Countries[9];
-    case "Mexico":
-      return Countries[10];
-    case "Peru":
-      return Countries[11];
-    case "South Africa":
-      return Countries[12];
-    case "Italy":
-      return Countries[13];
-    case "Iran":
-      return Countries[14];
-    case "Germany":
-      return Countries[15];
-    case "Chile":
-      return Countries[16];
-    case "Iraq":
-      return Countries[17];
-    case "Belgium":
-      return Countries[18];
-    case "Indonesia":
-      return Countries[19];
-    case "Bangladesh":
-      return Countries[20];
-    case "Ukraine":
-      return Countries[21];
-    case "Philippines":
-      return Countries[22];
-    case "Poland":
-      return Countries[23];
-    case "Turkey":
-      return Countries[24];
-    case "Netherlands":
-      return Countries[25];
-    case "Saudi Arabia":
-      return Countries[26];
-    case "Czechia":
-      return Countries[27];
-    case "Pakistan":
-      return Countries[28];
-    case "Israel":
-      return Countries[29];
-    case "Sierra Leone":
-      return Countries[30];
-    case "China":
-      return Countries[31];
-    case "Nigeria":
-      return Countries[32];
-    case "Uruguay":
-      return Countries[33];
-    case "Australia":
-      return Countries[34];
-    case "Austria":
-      return Countries[35];
-    case "Azerbaijan":
-      return Countries[36];
-    case "Bosnia and Herzegovina":
-      return Countries[37];
-    case "Barbados":
-      return Countries[38];
-    case "Burkina Faso":
-      return Countries[39];
-    case "Bulgaria":
-      return Countries[40];
-    case "Bahrain":
-      return Countries[41];
-    case "Hungary":
-      return Countries[42];
-    case "Romania":
-      return Countries[43];
-    case "Switzerland":
-      return Countries[44];
-    case "Portugal":
-      return Countries[45];
-    case "Greece":
-      return Countries[46];
-    case "Serbia":
-      return Countries[47];
-    case "Jordan":
-      return Countries[48];
-    case "Honduras":
-      return Countries[49];
-    case "Slovakia":
-      return Countries[50];
-    case "Georgia":
-      return Countries[51];
-    case "Croatia":
-      return Countries[52];
-    case "Slovenia":
-      return Countries[53];
-    case "Lithuania":
-      return Countries[54];
-    case "Myanmar":
-      return Countries[55];
-    case "Armenia":
-      return Countries[56];
-    case "Nepal":
-      return Countries[57];
-    case "Belarus":
-      return Countries[58];
-    case "UAE":
-      return Countries[59];
-    case "Denmark":
-      return Countries[60];
-    case "Palestine":
-      return Countries[61];
-    case "Kazakhstan":
-      return Countries[62];
-    case "Malaysia":
-      return Countries[63];
-    case "Libya":
-      return Countries[64];
-    case "Kuwait":
-      return Countries[65];
-    case "Latvia":
-      return Countries[66];
-    case "Kyrgyzstan":
-      return Countries[67];
-    case "Morocco":
-      return Countries[68];
-    case "Canada":
-      return Countries[69];
-    case "Ecuador":
-      return Countries[70];
-    case "Qatar":
-      return Countries[71];
-    case "Panama":
-      return Countries[72];
-    case "Bolivia":
-      return Countries[73];
-    case "Oman":
-      return Countries[74];
-    case "Dominican Republic":
-      return Countries[75];
-    case "Guatemala":
-      return Countries[76];
-    case "Japan":
-      return Countries[77];
-    case "Egypt":
-      return Countries[78];
-    case "Venezuela":
-      return Countries[79];
-    case "Costa Rica":
-      return Countries[80];
-    case "Moldova":
-      return Countries[81];
-    case "Uzbekistan":
-      return Countries[82];
-    case "Ethiopia":
-      return Countries[83];
-    case "Lebanon":
-      return Countries[84];
-    case "Singapore":
-      return Countries[85];
-    case "Tunisia":
-      return Countries[86];
-    case "Paraguay":
-      return Countries[87];
-    case "Ghana":
-      return Countries[88];
-    case "Kenya":
-      return Countries[89];
-    case "Algeria":
-      return Countries[90];
-    case "Afghanistan":
-      return Countries[91];
-    case "El Salvador":
-      return Countries[92];
-    case "North Macedonia":
-      return Countries[93];
-    case "S. Korea":
-      return Countries[94];
-    case "Ireland":
-      return Countries[95];
-    case "Cameroon":
-      return Countries[96];
-    case "Ivory Coast":
-      return Countries[97];
-    case "Norway":
-      return Countries[98];
-    case "Montenegro":
-      return Countries[99];
-    case "Luxembourg":
-      return Countries[100];
-    case "Madagascar":
-      return Countries[101];
-    case "Zambia":
-      return Countries[102];
-    case "Senegal":
-      return Countries[103];
-    case "Finland":
-      return Countries[104];
-    case "Albania":
-      return Countries[105];
-    case "Namibia":
-      return Countries[106];
-    case "Mozambique":
-      return Countries[107];
-    case "Sri Lanka":
-      return Countries[108];
-    case "Guinea":
-      return Countries[109];
-    case "Maldives":
-      return Countries[110];
-    case "Faeroe Islands":
-      return Countries[111];
-    case "Gibraltar":
-      return Countries[112];
-    case "Andorra":
-      return Countries[113];
-    case "Bermuda":
-      return Countries[114];
-    case "Monaco":
-      return Countries[115];
-    case "Falkland Islands":
-      return Countries[116];
-    case "Iceland":
-      return Countries[117];
-    case "Channel Islands":
-      return Countries[118];
-    case "Malta":
-      return Countries[119];
-    case "Cayman Islands":
-      return Countries[120];
-    case "Hong Kong":
-      return Countries[121];
-    case "St. Barth":
-      return Countries[122];
-    case "Saint Pierre Miquelon":
-      return Countries[123];
-    case "Cyprus":
-      return Countries[124];
-    case "Aruba":
-      return Countries[125];
-    case "San Marino":
-      return Countries[126];
-    case "Estonia":
-      return Countries[127];
-    case "French Guiana":
-      return Countries[128];
-    case "Sweden":
-      return Countries[129];
-    case "Bhutan":
-      return Countries[130];
-    case "Liechtenstein":
-      return Countries[131];
-    case "New Zealand":
-      return Countries[132];
-    case "Mauritius":
-      return Countries[133];
-    case "Greenland":
-      return Countries[134];
-    case "Isle of Man":
-      return Countries[135];
-    case "Guadeloupe":
-      return Countries[136];
-    case "Saint Martin":
-      return Countries[137];
-    case "Cabo Verde":
-      return Countries[138];
-    case "British Virgin Islands":
-      return Countries[139];
-    case "Brunei":
-      return Countries[140];
-    case "Sint Maarten":
-      return Countries[141];
-    case "Martinique":
-      return Countries[142];
-    case "Botswana":
-      return Countries[143];
-    case "Turks and Caicos":
-      return Countries[144];
-    case "Caribbean Netherlands":
-      return Countries[145];
-    case "Anguilla":
-      return Countries[146];
-    case "Gabon":
-      return Countries[147];
-    case "Montserrat":
-      return Countries[148];
-    case "Wallis and Futuna":
-      return Countries[149];
-    case "Bahamas":
-      return Countries[150];
-    case "Sudan":
-      return Countries[151];
-    case "DRC":
-      return Countries[152];
-    case "Tajikistan":
-      return Countries[153];
-    case "Syria":
-      return Countries[154];
-    case "Nicaragua":
-      return Countries[155];
-    case "Congo":
-      return Countries[156];
-    case "Somalia":
-      return Countries[157];
-    case "Chad":
-      return Countries[158];
-    case "Cuba":
-      return Countries[159];
-    case "Vietnam":
-      return Countries[160];
-    case "Thailand":
-      return Countries[161];
-    case "Rwanda":
-      return Countries[162];
-    case "Uganda":
-      return Countries[163];
-    case "Benin":
-      return Countries[164];
-    case "Angola":
-      return Countries[165];
-    case "Zimbabwe":
-      return Countries[166];
-    case "Cambodia":
-      return Countries[167];
-    case "Taiwan":
-      return Countries[168];
-    case "Jamaica":
-      return Countries[169];
-    case "Togo":
-      return Countries[170];
-    case "Mali":
-      return Countries[171];
-    case "Djibouti":
-      return Countries[172];
-    case "Mauritania":
-      return Countries[173];
-    case "Mongolia":
-      return Countries[174];
-    case "Eswatini":
-      return Countries[175];
-    case "Burundi":
-      return Countries[176];
-    case "Equatorial Guinea":
-      return Countries[177];
-    case "Malawi":
-      return Countries[178];
-    case "Laos":
-      return Countries[179];
-    case "Papua New Guinea":
-      return Countries[180];
-    case "Liberia":
-      return Countries[181];
-    case "CAR":
-      return Countries[182];
-    case "Haiti":
-      return Countries[183];
-    case "Trinidad and Tobago":
-      return Countries[184];
-    case "Niger":
-      return Countries[185];
-    case "Réunion":
-      return Countries[186];
-    case "New Caledonia":
-      return Countries[187];
-    case "Suriname":
-      return Countries[188];
-    case "Mayotte":
-      return Countries[189];
-    case "Gambia":
-      return Countries[190];
-    case "Lesotho":
-      return Countries[191];
-    case "Guyana":
-      return Countries[192];
-    case "French Polynesia":
-      return Countries[193];
-    case "Belize":
-      return Countries[194];
-    case "Guinea-Bissau":
-      return Countries[195];
-    case "St. Vincent Grenadines":
-      return Countries[196];
-    case "South Sudan":
-      return Countries[197];
-    case "Timor-Leste":
-      return Countries[198];
-    case "Saint Lucia":
-      return Countries[199];
-    case "Fiji":
-      return Countries[200];
-    case "Curaçao":
-      return Countries[201];
-    case "Yemen":
-      return Countries[202];
-    case "Solomon Islands":
-      return Countries[203];
-    case "Dominica":
-      return Countries[204];
-    case "Seychelles":
-      return Countries[205];
-    case "Grenada":
-      return Countries[206];
-    case "Sao Tome and Principe":
-      return Countries[207];
-    case "Vanuatu":
-      return Countries[208];
-    case "Saint Kitts and Nevis":
-      return Countries[209];
-    case "Antigua and Barbuda":
-      return Countries[210];
-    case "Macao":
-      return Countries[211];
-    case "Marshall Islands":
-      return Countries[212];
-    case "MS Zaandam":
-      return Countries[213];
-    case "Western Sahara":
-      return Countries[214];
-    case "Vatican City":
-      return Countries[215];
-    case "Tanzania":
-      return Countries[216];
-    case "Eritrea":
-      return Countries[217];
-    case "Comoros":
-      return Countries[218];
-    case "Diamond Princess":
-      return Countries[219];
-
-    default:
-      return { id: 999, name: "None", flag: EarthFlag };
-  }
+export function test(country) {
+  const countries = {
+    World: () => Countries[0],
+    USA: () => Countries[1],
+    India: () => Countries[2],
+    Brazil: () => Countries[3],
+    Russia: () => Countries[4],
+    France: () => Countries[5],
+    Spain: () => Countries[6],
+    Argentina: () => Countries[7],
+    Colombia: () => Countries[8],
+    UK: () => Countries[9],
+    Mexico: () => Countries[10],
+    Peru: () => Countries[11],
+    "South Africa": () => Countries[12],
+    Italy: () => Countries[13],
+    Iran: () => Countries[14],
+    Germany: () => Countries[15],
+    Chile: () => Countries[16],
+    Iraq: () => Countries[17],
+    Belgium: () => Countries[18],
+    Indonesia: () => Countries[19],
+    Bangladesh: () => Countries[20],
+    Ukraine: () => Countries[21],
+    Philippines: () => Countries[22],
+    Poland: () => Countries[23],
+    Turkey: () => Countries[24],
+    Netherlands: () => Countries[25],
+    "Saudi Arabia": () => Countries[26],
+    Czechia: () => Countries[27],
+    Pakistan: () => Countries[28],
+    Israel: () => Countries[29],
+    "Sierra Leone": () => Countries[30],
+    China: () => Countries[31],
+    Nigeria: () => Countries[32],
+    Uruguay: () => Countries[33],
+    Australia: () => Countries[34],
+    Austria: () => Countries[35],
+    Azerbaijan: () => Countries[36],
+    "Bosnia and Herzegovina": () => Countries[37],
+    Barbados: () => Countries[38],
+    "Burkina Faso": () => Countries[39],
+    Bulgaria: () => Countries[40],
+    Bahrain: () => Countries[41],
+    Hungary: () => Countries[42],
+    Romania: () => Countries[43],
+    Switzerland: () => Countries[44],
+    Portugal: () => Countries[45],
+    Greece: () => Countries[46],
+    Serbia: () => Countries[47],
+    Jordan: () => Countries[48],
+    Honduras: () => Countries[49],
+    Slovakia: () => Countries[50],
+    Georgia: () => Countries[51],
+    Croatia: () => Countries[52],
+    Slovenia: () => Countries[53],
+    Lithuania: () => Countries[54],
+    Myanmar: () => Countries[55],
+    Armenia: () => Countries[56],
+    Nepal: () => Countries[57],
+    Belarus: () => Countries[58],
+    UAE: () => Countries[59],
+    Denmark: () => Countries[60],
+    Palestine: () => Countries[61],
+    Kazakhstan: () => Countries[62],
+    Malaysia: () => Countries[63],
+    Libya: () => Countries[64],
+    Kuwait: () => Countries[65],
+    Latvia: () => Countries[66],
+    Kyrgyzstan: () => Countries[67],
+    Morocco: () => Countries[68],
+    Canada: () => Countries[69],
+    Ecuador: () => Countries[70],
+    Qatar: () => Countries[71],
+    Panama: () => Countries[72],
+    Bolivia: () => Countries[73],
+    Oman: () => Countries[74],
+    "Dominican Republic": () => Countries[75],
+    Guatemala: () => Countries[76],
+    Japan: () => Countries[77],
+    Egypt: () => Countries[78],
+    Venezuela: () => Countries[79],
+    "Costa Rica": () => Countries[80],
+    Moldova: () => Countries[81],
+    Uzbekistan: () => Countries[82],
+    Ethiopia: () => Countries[83],
+    Lebanon: () => Countries[84],
+    Singapore: () => Countries[85],
+    Tunisia: () => Countries[86],
+    Paraguay: () => Countries[87],
+    Ghana: () => Countries[88],
+    Kenya: () => Countries[89],
+    Algeria: () => Countries[90],
+    Afghanistan: () => Countries[91],
+    "El Salvador": () => Countries[92],
+    "North Macedonia": () => Countries[93],
+    "S. Korea": () => Countries[94],
+    Ireland: () => Countries[95],
+    Cameroon: () => Countries[96],
+    "Ivory Coast": () => Countries[97],
+    Norway: () => Countries[98],
+    Montenegro: () => Countries[99],
+    Luxembourg: () => Countries[100],
+    Madagascar: () => Countries[101],
+    Zambia: () => Countries[102],
+    Senegal: () => Countries[103],
+    Finland: () => Countries[104],
+    Albania: () => Countries[105],
+    Namibia: () => Countries[106],
+    Mozambique: () => Countries[107],
+    "Sri Lanka": () => Countries[108],
+    Guinea: () => Countries[109],
+    Maldives: () => Countries[110],
+    "Faeroe Islands": () => Countries[111],
+    Gibraltar: () => Countries[112],
+    Andorra: () => Countries[113],
+    Bermuda: () => Countries[114],
+    Monaco: () => Countries[115],
+    "Falkland Islands": () => Countries[116],
+    Iceland: () => Countries[117],
+    "Channel Islands": () => Countries[118],
+    Malta: () => Countries[119],
+    "Cayman Islands": () => Countries[120],
+    "Hong Kong": () => Countries[121],
+    "St. Barth": () => Countries[122],
+    "Saint Pierre Miquelon": () => Countries[123],
+    Cyprus: () => Countries[124],
+    Aruba: () => Countries[125],
+    "San Marino": () => Countries[126],
+    Estonia: () => Countries[127],
+    "French Guiana": () => Countries[128],
+    Sweden: () => Countries[129],
+    Bhutan: () => Countries[130],
+    Liechtenstein: () => Countries[131],
+    "New Zealand": () => Countries[132],
+    Mauritius: () => Countries[133],
+    Greenland: () => Countries[134],
+    "Isle of Man": () => Countries[135],
+    Guadeloupe: () => Countries[136],
+    "Saint Martin": () => Countries[137],
+    "Cabo Verde": () => Countries[138],
+    "British Virgin Islands": () => Countries[139],
+    Brunei: () => Countries[140],
+    "Sint Maarten": () => Countries[141],
+    Martinique: () => Countries[142],
+    Botswana: () => Countries[143],
+    "Turks and Caicos": () => Countries[144],
+    "Caribbean Netherlands": () => Countries[145],
+    Anguilla: () => Countries[146],
+    Gabon: () => Countries[147],
+    Montserrat: () => Countries[148],
+    "Wallis and Futuna": () => Countries[149],
+    Bahamas: () => Countries[150],
+    Sudan: () => Countries[151],
+    DRC: () => Countries[152],
+    Tajikistan: () => Countries[153],
+    Syria: () => Countries[154],
+    Nicaragua: () => Countries[155],
+    Congo: () => Countries[156],
+    Somalia: () => Countries[157],
+    Chad: () => Countries[158],
+    Cuba: () => Countries[159],
+    Vietnam: () => Countries[160],
+    Thailand: () => Countries[161],
+    Rwanda: () => Countries[162],
+    Uganda: () => Countries[163],
+    Benin: () => Countries[164],
+    Angola: () => Countries[165],
+    Zimbabwe: () => Countries[166],
+    Cambodia: () => Countries[167],
+    Taiwan: () => Countries[168],
+    Jamaica: () => Countries[169],
+    Togo: () => Countries[170],
+    Mali: () => Countries[171],
+    Djibouti: () => Countries[172],
+    Mauritania: () => Countries[173],
+    Mongolia: () => Countries[174],
+    Eswatini: () => Countries[175],
+    Burundi: () => Countries[176],
+    "Equatorial Guinea": () => Countries[177],
+    Malawi: () => Countries[178],
+    Laos: () => Countries[179],
+    "Papua New Guinea": () => Countries[180],
+    Liberia: () => Countries[181],
+    CAR: () => Countries[182],
+    Haiti: () => Countries[183],
+    "Trinidad and Tobago": () => Countries[184],
+    Niger: () => Countries[185],
+    Réunion: () => Countries[186],
+    "New Caledonia": () => Countries[187],
+    Suriname: () => Countries[188],
+    Mayotte: () => Countries[189],
+    Gambia: () => Countries[190],
+    Lesotho: () => Countries[191],
+    Guyana: () => Countries[192],
+    "French Polynesia": () => Countries[193],
+    Belize: () => Countries[194],
+    "Guinea-Bissau": () => Countries[195],
+    "St. Vincent Grenadines": () => Countries[196],
+    "South Sudan": () => Countries[197],
+    "Timor-Leste": () => Countries[198],
+    "Saint Lucia": () => Countries[199],
+    Fiji: () => Countries[200],
+    Curaçao: () => Countries[201],
+    Yemen: () => Countries[202],
+    "Solomon Islands": () => Countries[203],
+    Dominica: () => Countries[204],
+    Seychelles: () => Countries[205],
+    Grenada: () => Countries[206],
+    "Sao Tome and Principe": () => Countries[207],
+    Vanuatu: () => Countries[208],
+    "Saint Kitts and Nevis": () => Countries[209],
+    "Antigua and Barbuda": () => Countries[210],
+    Macao: () => Countries[211],
+    "Marshall Islands": () => Countries[212],
+    "MS Zaandam": () => Countries[213],
+    "Western Sahara": () => Countries[214],
+    "Vatican City": () => Countries[215],
+    Tanzania: () => Countries[216],
+    Eritrea: () => Countries[217],
+    Comoros: () => Countries[218],
+    "Diamond Princess": () => Countries[219],
+    default: () => Countries[0],
+  };
+  return (countries[country] || countries["default"])();
 }

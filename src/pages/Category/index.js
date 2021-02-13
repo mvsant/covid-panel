@@ -5,7 +5,6 @@ import Card from "../../components/Card";
 import Container from "../../components/Container";
 import Loading from "../../components/Loading";
 import Pagination from "../../components/Pagination";
-import { categoryFinder } from "../../utils/categories";
 import { usePrevious } from "../../utils/hooks";
 import { categoryMask } from "../../utils/masks";
 import { StyledWrapper } from "./style";
@@ -31,10 +30,7 @@ export default function Test() {
   useEffect(() => {
     function effect() {
       if (category !== prevCount) {
-        //request(setData, category)
-        //handleCategory(category);
-
-        setHighight(categoryFinder(category));
+        setHighight(category);
         setInProp(!inProp);
         setCurrentPage(1);
       }
@@ -92,7 +88,3 @@ export default function Test() {
     </>
   );
 }
-
-/*
-
-*/

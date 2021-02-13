@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { flagFinder } from "../../utils/flagFinder";
+import { test } from "../../utils/flagFinder";
 import { categoryMask, numbersMask } from "../../utils/masks";
 import { StyledCard } from "./style";
 
@@ -30,7 +30,7 @@ export default function Card({ data, name, type, category }) {
       <div className="profile">
         <img
           className="avatar"
-          src={flagFinder(name).flag}
+          src={test(name).flag}
           alt={data.country}
         />
         <h3>{data.country}</h3>
