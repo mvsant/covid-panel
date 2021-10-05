@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Covid-19 Panel",
+  "name": "Covid-19 Panel Data",
+  "description": "See current status of corona virus disease in numbers by countries.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +19,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation":"portrait",
+  "theme_color": "#14213d",
+  "background_color": "#b0cde7"
 }
