@@ -1,5 +1,7 @@
-import Container from "../../components/Container";
+import { lazy } from "react";
 import { StyledAbout } from "./style";
+
+const Container = lazy(() => import("../../components/Container"));
 
 export default function About() {
   return (

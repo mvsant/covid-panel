@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import { index } from "../../api";
-import Card from "../../components/Card";
-import Container from "../../components/Container";
+import {useState, useEffect, lazy, Suspense} from "react";
+import {index} from "../../api";
 import Loading from "../../components/Loading";
+
+const Container = lazy(() => import("../../components/Container"));
+const Card = lazy(() => import("../../components/Card"));
 
 export default function Home() {
   const [data, setData] = useState("");
@@ -25,13 +26,15 @@ export default function Home() {
   return data[0] === undefined ? (
     <Loading />
   ) : (
-    <Container>
-      <h2>World Status:</h2>
-      <Card data={data[0]} name={data[0].country} type="world" />
-      <h2>Most affected countries:</h2>
+    <Suspense fallback={<Loading />}>
+      <Container>
+        <h2>World Status:</h2>
+        <Card data={data[0]} name={data[0].country} type="world" />
+        <h2>Most affected countries:</h2>
 
-      {handleSort(data, "cases")}
-      {}
-    </Container>
+        {handleSort(data, "cases")}
+        {}
+      </Container>
+    </Suspense>
   );
 }

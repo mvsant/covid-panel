@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { request } from "../../api";
-import Card from "../../components/Card";
-import Container from "../../components/Container";
 import Loading from "../../components/Loading";
 import { usePrevious } from "../../utils/hooks";
 import "./styles.css";
+
+const Container = lazy(() => import("../../components/Container"));
+const Card = lazy(() => import("../../components/Card"));
 
 export default function Country() {
   const [data, setData] = useState("World");

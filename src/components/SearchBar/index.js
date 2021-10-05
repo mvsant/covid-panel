@@ -19,7 +19,6 @@ export default function SearchBar() {
   return (
     <>
       <StyledHeader>
-        <br />
         <StyledSearch
           type="text"
           name="search"

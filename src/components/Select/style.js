@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import EarthFlag from "../../assets/images/un-flag.png";
+import EarthFlag from "../../assets/images/un-flag.webp";
 
 export const StyledSelectContainer = styled.div`
   label {

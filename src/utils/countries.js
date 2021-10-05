@@ -1,4 +1,4 @@
-import EarthFlag from "../assets/images/un-flag.png";
+import EarthFlag from "../assets/images/un-flag.webp";
 
 export const Countries = [
   { id: 0, name: "World", flag: EarthFlag },

@@ -1,13 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy } from "react";
 import { useLocation } from "react-router-dom";
 import { index } from "../../api";
-import Card from "../../components/Card";
-import Container from "../../components/Container";
 import Loading from "../../components/Loading";
-import Pagination from "../../components/Pagination";
 import { usePrevious } from "../../utils/hooks";
 import { categoryMask } from "../../utils/masks";
 import { StyledWrapper } from "./style";
+
+const Card = lazy(() => import("../../components/Card"));
+const Container = lazy(() => import("../../components/Container"));
+const Pagination = lazy(() => import("../../components/Pagination"));
+
 
 export default function Test() {
   const [data, setData] = useState("");

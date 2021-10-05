@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { lazy, useState } from "react";
 import { Categories } from "../../utils/categories";
 import { categoryMask } from "../../utils/masks";
-import SearchBar from "../SearchBar";
-import Burguer from "./Burguer";
 import Nav, { ModalLink } from "./style";
+
+const SearchBar = lazy(() => import("../SearchBar"));
+const Burguer = lazy(() => import("./Burguer"));
+
 
 export default function Navbar() {
   const [toggleNav, setToggleNav] = useState(false);
   const [toggleDrop, setToggleDrop] = useState(false);
-
-  console.log({ toggleNav }, { toggleDrop });
+  
   return (
     <Nav>
       <Nav.Logo>
@@ -24,9 +25,8 @@ export default function Navbar() {
         <li
           className="list-item"
           onBlur={() => setToggleNav(!toggleNav)}
-          toggle={!toggleNav}
         >
-          Search
+          <label htmlFor="sch">Search</label>
           <SearchBar />
         </li>
         <li>
