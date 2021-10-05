@@ -29,7 +29,6 @@ const Nav = styled.nav`
   align-items: center;
   min-height: 8vh;
   background-color: var(--bg-secondary);
-  font-family: "Poppins", sans-serif;
   z-index: 1;
   .nav-title{
     ${baseLink}
@@ -91,7 +90,6 @@ Nav.Modal = styled.div`
 
   .modal {
     position: relative;
-    font-family: monospace;
     background-color: white;
     width: auto;
     height: auto;
@@ -106,7 +104,6 @@ Nav.Modal = styled.div`
     background-color: #29b0b9;
     color: white;
     border: none;
-    font-family: monospace;
   }
 
   .modal-close {
@@ -124,7 +121,6 @@ Nav.Modal = styled.div`
   @media (max-width: 768px) {
     .modal {
       position: relative;
-      font-family: monospace;
       background-color: white;
       width: 100%;
       height: auto;
